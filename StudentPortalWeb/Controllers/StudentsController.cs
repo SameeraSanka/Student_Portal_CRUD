@@ -21,6 +21,8 @@ namespace StudentPortalWeb.Controllers
             return View();
         }
 
+
+        //Add Student
         [HttpPost]
         public async Task<IActionResult> Add(AddStudentViewModel viewModel)
         {
@@ -38,6 +40,7 @@ namespace StudentPortalWeb.Controllers
             return View();
         }
 
+        // view student
         [HttpGet]
         public async Task<IActionResult> List()
         {
@@ -52,6 +55,7 @@ namespace StudentPortalWeb.Controllers
             return View(student);
         }
 
+        // edit Student
         [HttpPost]
         public async Task<IActionResult> Edit(Student viewModel)
         {
@@ -70,6 +74,7 @@ namespace StudentPortalWeb.Controllers
         return RedirectToAction("List", "Students");
         }
 
+        //Delete student
         [HttpPost]
         public async Task<IActionResult> Delete(Student viewModel)
         {
